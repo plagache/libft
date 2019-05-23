@@ -6,7 +6,7 @@
 /*   By: plagache <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 12:05:59 by plagache          #+#    #+#             */
-/*   Updated: 2018/12/20 13:58:50 by plagache         ###   ########.fr       */
+/*   Updated: 2018/12/20 16:35:43 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_2lstaddend(t_dlist **lst, t_dlist *link)
 		*lst = (*lst)->next;
 	if ((*lst)->next == NULL)
 	{
-		link->prev = (*lst)->next ;
+		link->prev = (*lst)->next;
 		link->next = NULL;
 	}
 }

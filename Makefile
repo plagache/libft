@@ -6,7 +6,7 @@
 #    By: plagache <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/20 11:38:02 by plagache          #+#    #+#              #
-#    Updated: 2018/12/20 13:55:56 by plagache         ###   ########.fr        #
+#    Updated: 2019/05/23 16:42:35 by plagache         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,6 +76,7 @@ SRC = ft_memset.c \
 	  ft_2lstaddstrt.c \
 	  ft_2lstaddend.c \
 	  ft_2lstdelone.c \
+	  get_next_line.c \
 
 SRCS = $(addprefix srcs/,$(SRC))
 

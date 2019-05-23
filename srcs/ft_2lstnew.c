@@ -6,7 +6,7 @@
 /*   By: plagache <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 12:09:59 by plagache          #+#    #+#             */
-/*   Updated: 2018/12/20 12:16:31 by plagache         ###   ########.fr       */
+/*   Updated: 2018/12/20 16:37:56 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_dlist		*ft_2lstnew(void *content)
 	{
 		if (!(link->content = (void*)malloc(sizeof(*content))))
 			return (0);
-		link->content = ft_memmove(link->content, content, sizeof *content);
+		link->content = ft_memmove(link->content, content, sizeof(*content));
 	}
 	link->next = NULL;
 	link->prev = NULL;

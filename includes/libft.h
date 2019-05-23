@@ -6,7 +6,7 @@
 /*   By: plagache <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 15:42:11 by plagache          #+#    #+#             */
-/*   Updated: 2018/12/20 13:55:45 by plagache         ###   ########.fr       */
+/*   Updated: 2018/12/20 16:38:36 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ typedef struct		s_list
 typedef struct		s_dlist
 {
 	void			*content;
-	struct	s_dlist	*next;
-	struct	s_dlist	*prev;
+	struct s_dlist	*next;
+	struct s_dlist	*prev;
 }					t_dlist;
 
 /*

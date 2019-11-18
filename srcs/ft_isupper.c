@@ -6,7 +6,7 @@
 /*   By: plagache <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 16:07:20 by plagache          #+#    #+#             */
-/*   Updated: 2018/12/07 16:00:35 by plagache         ###   ########.fr       */
+/*   Updated: 2019/11/18 19:37:07 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return (1);
-	return (0);
+		return (TRUE);
+	return (FALSE);
 }

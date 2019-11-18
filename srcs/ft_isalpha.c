@@ -6,7 +6,7 @@
 /*   By: plagache <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 18:43:57 by plagache          #+#    #+#             */
-/*   Updated: 2018/12/07 16:00:35 by plagache         ###   ########.fr       */
+/*   Updated: 2019/11/18 19:38:45 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	ft_isalpha(int c)
 {
 	if (ft_isupper(c))
-		return (1);
+		return (TRUE);
 	if (ft_islower(c))
-		return (1);
-	return (0);
+		return (TRUE);
+	return (FALSE);
 }

@@ -1,0 +1,6 @@
+*.swp
+a.out*
+*.a
+.DS_Store
+tags
+*main.c

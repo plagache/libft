@@ -6,15 +6,15 @@
 /*   By: plagache <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 16:05:08 by plagache          #+#    #+#             */
-/*   Updated: 2018/12/07 16:00:35 by plagache         ###   ########.fr       */
+/*   Updated: 2019/11/18 19:36:48 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_islower(int c)
+int	ft_islower(int character)
 {
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	return (0);
+	if (character >= 'a' && character <= 'z')
+		return (TRUE);
+	return (FALSE);
 }

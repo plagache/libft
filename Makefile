@@ -6,7 +6,7 @@
 #    By: plagache <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/20 11:38:02 by plagache          #+#    #+#              #
-#    Updated: 2019/11/18 20:00:58 by plagache         ###   ########.fr        #
+#    Updated: 2019/11/18 20:14:52 by plagache         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -124,7 +124,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJECT)
 	ar rcs $(NAME) $(OBJECT)
-	echo "\033[35mmake done\033[0m"
+	echo "\033[35mmake libft done\033[0m"
 
 FORCE:
 
@@ -134,14 +134,14 @@ out/%.o : srcs/%.c
 
 clean :
 	$(RM) -rf out
-	echo "\033[35mclean done\033[0m"
+	echo "\033[35mclean libft done\033[0m"
 
 fclean :clean
 	$(RM) $(NAME)
-	echo "\033[35mfclean done\033[0m"
+	echo "\033[35mfclean libft done\033[0m"
 
 re : fclean all
-	echo "\033[35mre done\033[0m"
+	echo "\033[35mre libft done\033[0m"
 
 .PHONY : all clean fclean re FORCE
 .SILENT : fclean clean re

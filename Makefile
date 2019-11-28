@@ -6,7 +6,7 @@
 #    By: plagache <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/20 11:38:02 by plagache          #+#    #+#              #
-#    Updated: 2019/11/18 20:14:52 by plagache         ###   ########.fr        #
+#    Updated: 2019/11/27 17:20:22 by plagache         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ SRC	=	ft_memset.c \
 		ft_strnequ.c \
 		ft_strsub.c \
 		ft_strjoin.c \
+		ft_strjoinfree.c\
 		ft_strtrim.c \
 		ft_strsplit.c \
 		ft_itoa.c \

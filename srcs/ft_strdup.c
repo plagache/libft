@@ -6,28 +6,28 @@
 /*   By: plagache <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 16:38:01 by plagache          #+#    #+#             */
-/*   Updated: 2018/12/07 16:00:35 by plagache         ###   ########.fr       */
+/*   Updated: 2019/11/28 14:11:28 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strdup(const char *s1)
+char	*ft_strdup(char *s1)
 {
-	int		c;
+	int		count;
 	int		i;
 	char	*dest;
 
-	c = 0;
+	count = 0;
 	i = ft_strlen(s1) + 1;
 	if (!(dest = (char*)malloc(sizeof(char) * (i))))
 		return (0);
-	while (s1[c])
+	while (s1[count])
 	{
-		dest[c] = s1[c];
-		c++;
+		dest[count] = s1[count];
+		count++;
 	}
-	dest[c] = '\0';
+	dest[count] = '\0';
 	return (dest);
 }

@@ -106,6 +106,7 @@ void				ft_putnbr_fd(int n, int fd);
 **		ALPHA NUM 		**
 */
 
+long long			ft_atol(const char *str);
 int					ft_atoi(const char *str);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);

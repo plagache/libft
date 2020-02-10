@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-static size_t		countwords(const char *s, char c)
+static size_t		countwords(char const *s, char c)
 {
 	unsigned int w;
 	unsigned int m;
@@ -22,7 +22,7 @@ static size_t		countwords(const char *s, char c)
 	w = 0;
 	while (s[m])
 	{
-		if (s[m] != c)
+		if (s[m] != c && s[m])
 		{
 			w++;
 			while (s[m] != c && s[m])
@@ -34,16 +34,16 @@ static size_t		countwords(const char *s, char c)
 	return (w);
 }
 
-static size_t		lenword(const char *s, char c)
+static size_t		lenword(char const *s, char c)
 {
 	size_t			lenword;
 	unsigned int	ms;
 
 	lenword = 0;
 	ms = 0;
-	while (s[ms] == c)
+	while (s[ms] == c && s[ms])
 		ms++;
-	while (s[ms] != c)
+	while (s[ms] != c && s[ms])
 	{
 		lenword++;
 		ms++;
@@ -61,15 +61,15 @@ char				**ft_strsplit(char const *s, char c)
 	ms = 0;
 	m = 0;
 	if (!s)
-		return (0);
+		return (NULL);
 	if (!(mboard = (char**)malloc(sizeof(char*) * (countwords(s, c) + 1))))
-		return (0);
+		return (NULL);
 	while (m < countwords(s, c))
 	{
-		if (!(mboard[m] = ft_strnew(lenword(&s[ms], c) + 1)))
+		if (!(mboard[m] = ft_strnew(lenword(&(s[ms]), c) + 1)))
 			mboard[m] = 0;
 		mw = 0;
-		while (s[ms] == c)
+		while (s[ms] == c && s[ms])
 			ms++;
 		while (s[ms] != c && s[ms])
 			mboard[m][mw++] = s[ms++];

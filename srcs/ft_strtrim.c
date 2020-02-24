@@ -32,7 +32,7 @@ char			*ft_strtrim(char const *s)
 	unsigned int	len;
 
 	if (s == 0)
-		return (0);
+		return (NULL);
 	d = ft_strlen(s) - 1;
 	c = 0;
 	if (blank(s) == 0)

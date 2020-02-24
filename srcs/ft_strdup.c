@@ -22,7 +22,7 @@ char	*ft_strdup(char *s1)
 	count = 0;
 	i = ft_strlen(s1) + 1;
 	if (!(dest = (char*)malloc(sizeof(char) * (i))))
-		return (0);
+		return (NULL);
 	while (s1[count])
 	{
 		dest[count] = s1[count];

@@ -1,6 +1,6 @@
 *.swp
 a.out*
-*.a
+*.[ao]
 .DS_Store
 tags
 *main.c

@@ -23,5 +23,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *)s + b);
 		b++;
 	}
-	return (0);
+	return (NULL);
 }

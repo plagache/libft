@@ -20,9 +20,9 @@ char	*ft_strmap(char const *s, char (*f)(char))
 
 	c = 0;
 	if (s == 0)
-		return (0);
+		return (NULL);
 	if (!(dest = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1))))
-		return (0);
+		return (NULL);
 	while (s[c])
 	{
 		dest[c] = f(s[c]);

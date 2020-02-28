@@ -23,5 +23,5 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 			link->next = ft_lstmap(lst->next, f);
 		return (link);
 	}
-	return (0);
+	return (NULL);
 }

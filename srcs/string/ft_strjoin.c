@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plagache <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 17:25:33 by plagache          #+#    #+#             */
-/*   Updated: 2018/12/21 14:21:35 by plagache         ###   ########.fr       */
+/*   Updated: 2020/03/17 18:56:13 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,19 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*dest;
-	size_t	c;
-	size_t	d;
-	size_t len;
+	char	*new_str;
+	size_t	len;
+	size_t	len1;
 
-	c = 0;
-	d = 0;
-	len = ft_strlen(s1) + ft_strlen(s2); 
-	if (s1 == 0 || s2 == 0)
+	if (!s1 || !s2)
 		return (NULL);
-	if (!(dest = (char*)malloc(sizeof(char) * (len + 1))))
+	len1 = ft_strlen(s1);
+	len = len1 + ft_strlen(s2);
+	new_str = (char *)malloc(sizeof(char) * (len + 1));
+	if (new_str == NULL)
 		return (NULL);
-	while (ft_strlen(s1) > c)
-	{
-		dest[c] = s1[c];
-		c++;
-	}
-	while (ft_strlen(s2) > d)
-	{
-		dest[c + d] = s2[d];
-		d++;
-	}
-	dest[c + d] = '\0';
-	return (dest);
+	new_str[len] = '\0';
+	ft_strcpy(new_str, s1);
+	ft_strcpy(new_str + len1, s2);
+	return (new_str);
 }

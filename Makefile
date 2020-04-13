@@ -6,7 +6,7 @@
 #    By: plagache <plagache@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/20 11:38:02 by plagache          #+#    #+#              #
-#    Updated: 2020/03/17 21:48:36 by plagache         ###   ########.fr        #
+#    Updated: 2020/04/13 15:50:53 by plagache         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,8 +54,9 @@ STRING	=	ft_strlen \
 NUMBER	=	ft_atoi \
 			ft_atol \
 
-MEM		=	ft_memset \
-			ft_bzero \
+MEM		=	ft_bzero \
+			ft_free_arr \
+			ft_memset \
 			ft_memcpy \
 			ft_memccpy \
 			ft_memmove \

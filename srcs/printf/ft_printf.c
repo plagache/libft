@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plagache <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 15:58:10 by plagache          #+#    #+#             */
-/*   Updated: 2019/08/13 11:40:29 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/13 15:54:24 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int			parsing(char *ptr, int end, t_conv_id *struct_ptr)
 	int	ret;
 	int	pos;
 
-	pos = 0;
 	struct_ptr->conv = ptr[end];
 	if ((pos = flag(ptr, end, struct_ptr)) == -1)
 		return (-1);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plagache <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 13:57:54 by plagache          #+#    #+#             */
-/*   Updated: 2018/12/17 11:51:16 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/13 13:36:52 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,14 +67,14 @@ char				**ft_strsplit(char const *s, char c)
 	while (m < countwords(s, c))
 	{
 		if (!(mboard[m] = ft_strnew(lenword(&(s[ms]), c) + 1)))
-			mboard[m] = 0;
+			mboard[m] = NULL;
 		mw = 0;
 		while (s[ms] == c && s[ms])
 			ms++;
-		while (s[ms] != c && s[ms])
+		while (s[ms] != c && s[ms] && mboard[m])
 			mboard[m][mw++] = s[ms++];
 		m++;
 	}
-	mboard[m] = 0;
+	mboard[m] = NULL;
 	return (mboard);
 }

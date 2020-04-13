@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_free_arr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/17 15:07:51 by plagache          #+#    #+#             */
-/*   Updated: 2020/04/13 16:12:18 by plagache         ###   ########.fr       */
+/*   Created: 2020/04/13 15:49:07 by plagache          #+#    #+#             */
+/*   Updated: 2020/04/13 17:50:59 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void	*ft_memalloc(size_t size)
+void		free_arr(void **arr)
 {
-	void *dest;
+	int c;
 
-	if (!(dest = malloc(sizeof(unsigned char) * (size))))
-		return (NULL);
-	ft_bzero(dest, size);
-	return (dest);
+	c = 0;
+	while (arr[c] != NULL)
+	{
+		free(arr[c]);
+		c++;
+	}
+	free(arr);
 }

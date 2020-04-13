@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plagache <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 17:39:28 by plagache          #+#    #+#             */
-/*   Updated: 2018/12/18 12:30:34 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/13 16:01:42 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	else
 	{
 		if (!(link->content = (void *)malloc(sizeof(content))))
+		{
+			free(link);
 			return (NULL);
+		}
 		link->content = ft_memmove(link->content, content, content_size);
 		link->content_size = content_size;
 	}

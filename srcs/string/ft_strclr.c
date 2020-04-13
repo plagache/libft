@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plagache <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 17:36:38 by plagache          #+#    #+#             */
-/*   Updated: 2018/12/07 16:00:35 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/13 16:58:02 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_strclr(char *s)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plagache <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 15:42:11 by plagache          #+#    #+#             */
-/*   Updated: 2019/11/28 14:11:47 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/13 15:51:49 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,9 @@ typedef struct		s_dlist
 **		MEM				**
 */
 
-void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
+void				free_arr(void **arr);
+void				*ft_memset(void *b, int c, size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);

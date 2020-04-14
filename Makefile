@@ -6,13 +6,14 @@
 #    By: plagache <plagache@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/20 11:38:02 by plagache          #+#    #+#              #
-#    Updated: 2020/04/13 15:50:53 by plagache         ###   ########.fr        #
+#    Updated: 2020/04/14 14:56:19 by plagache         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 STRING	=	ft_strlen \
+			ft_occurence_of \
 			ft_strdup \
 			ft_strcpy \
 			ft_strncpy \

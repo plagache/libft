@@ -6,7 +6,7 @@
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 15:42:11 by plagache          #+#    #+#             */
-/*   Updated: 2020/04/13 15:51:49 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/14 14:57:00 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ char				*ft_strnstr(const char *haystack, const char *needle,
 					size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+int					occurrence_of(char *str, char c);
 
 /*
 **		PUT 			**

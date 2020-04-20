@@ -133,28 +133,39 @@ CFLAGS = -Wall -Wextra -Werror
 
 CC = clang
 
+BLUE = "\\033[36m"
+RED = "\\033[31m"
+WHITE = "\\033[0m"
+GREEN = "\\033[32m"
+PURPLE = "\\033[35m"
+
+CHECK = "\\xE2\\x9C\\x94"
+OK = "$(CHECK)$(WHITE)"
+EOLCLR = "\\033[0K"
+
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	ar rcs $(NAME) $(OBJ)
-	echo "\033[35mmake libft done\033[0m"
+	printf "\r$(EOLCLR)$(BLUE)make libft done$(WHITE)\n"
 
 FORCE:
 
 $(PATH_OBJ)%.o : %.c $(HEADER)
 	mkdir -p out
+	printf "\r$(EOLCLR)$(NAME): $<"
 	$(CC) -I $(HEADER) -o $@ -c $<
 
 clean :
 	$(RM) -rf $(PATH_OBJ)
-	echo "\033[35mclean libft done\033[0m"
+	printf "$(PURPLE)clean libft done$(WHITE)\n"
 
 fclean :clean
 	$(RM) $(NAME)
-	echo "\033[35mfclean libft done\033[0m"
+	printf "$(RED)fclean libft done$(WHITE)\n"
 
 re : fclean all
-	echo "\033[35mre libft done\033[0m"
+	printf "$(GREEN)re libft done$(WHITE)\n"
 
 .PHONY : all clean fclean re FORCE
 .SILENT : fclean clean re all $(NAME) $(OBJ)

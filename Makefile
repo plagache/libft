@@ -6,7 +6,7 @@
 #    By: plagache <plagache@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/20 11:38:02 by plagache          #+#    #+#              #
-#    Updated: 2020/04/14 14:56:19 by plagache         ###   ########.fr        #
+#    Updated: 2020/04/21 16:25:38 by plagache         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -139,21 +139,19 @@ WHITE = "\\033[0m"
 GREEN = "\\033[32m"
 PURPLE = "\\033[35m"
 
-CHECK = "\\xE2\\x9C\\x94"
-OK = "$(CHECK)$(WHITE)"
-EOLCLR = "\\033[0K"
+LNECLR = "\\33[2K\\r"
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	ar rcs $(NAME) $(OBJ)
-	printf "\r$(EOLCLR)$(BLUE)make libft done$(WHITE)\n"
+	printf "$(LNECLR)$(GREEN)make libft done$(WHITE)\n"
 
 FORCE:
 
 $(PATH_OBJ)%.o : %.c $(HEADER)
 	mkdir -p out
-	printf "\r$(EOLCLR)$(NAME): $<"
+	printf "$(LNECLR)$(NAME): $<"
 	$(CC) -I $(HEADER) -o $@ -c $<
 
 clean :
@@ -165,7 +163,7 @@ fclean :clean
 	printf "$(RED)fclean libft done$(WHITE)\n"
 
 re : fclean all
-	printf "$(GREEN)re libft done$(WHITE)\n"
+	printf "$(BLUE)re libft done$(WHITE)\n"
 
 .PHONY : all clean fclean re FORCE
 .SILENT : fclean clean re all $(NAME) $(OBJ)
